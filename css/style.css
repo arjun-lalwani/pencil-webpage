@@ -16,6 +16,9 @@
 }
 
 /* Additional CSS Rules */
+* {
+	box-sizing: border-box;
+}
 
 * {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -53,13 +56,19 @@ h1, h2, h3, h4, h5, h6 {
 nav {
 	/* Fixes position to top of the page always. Doesn't scroll or go away*/
 	position: fixed;
+	background-color: #4B2720;
 	top: 0px;
 	z-index: 1px;
 	width: 100%;
 }
 
+.features {
+	background-color: #f8f8f8;
+	overflow: overlay; /* height cannot be fixed, needs to depend on cards */
+	padding-top: 20px;
+}
+
 .menu {
-	background-color: ##391D18;
 	list-style: none;
 	margin: 0px;
 	padding-top: 10px;
@@ -72,6 +81,59 @@ nav {
 	padding-top: 30px;
 }
 
+.letter {
+	color: black;
+	font-weight: 300;
+	font-size: 1.4rem;
+}
+
+.flex-grid {
+	display: flex;
+	flex-direction: column;
+}
+
+.card {
+	background-color: #fff;
+	border: 2px solid #dfdfdf;
+	margin: 0px 10px 16px 10px; 
+	border-radius: 3px;
+}
+
+
+.card h3 {
+	color: #000;
+	font-weight: 300;
+	padding-top: 10px;
+	padding-left: 60px;
+	margin-bottom: 0px;
+}
+
+.card p {
+	color: #000;
+	font-weight: 100;
+	font-size: 0.8rem;
+	padding-left: 60px;
+	padding-right: 5px;
+	padding-bottom: 20px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+.icons svg {
+	fill: #814236;
+	margin: 10px 0px 0px 10px;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+.features h2 {
+	color: black;
+	font-variant: small-caps;
+	font-weight: 100;
+	text-align: center;
+	font-size: 1.4rem;
+}
 
 .container h1 {
 	margin-bottom: 0px;
@@ -116,11 +178,11 @@ nav {
 		background: url(../img/pencil-header-sm.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: center bottom;
 		margin-top: 0px;
 	}
 
-	p {
+	header p {
 		color: black;
 	}
 
@@ -144,6 +206,21 @@ nav {
 		background-color: #5d3027;
 	}
 
+	.flex-grid {
+		flex-direction: row;
+		flex-wrap: wrap;
+		display: flex;
+		margin: 30px;
+		padding: 0px;
+	}
+
+	.card {
+		width: calc(50% - 20px);
+		height: 170px;
+		margin: 0px 0px 10px 10px;
+		text-align: center;
+	}
+
 	.container{
 		font-size: 2rem;
 		color: black;
@@ -155,8 +232,31 @@ nav {
 		font-size: 0.90em;
 	}
 
+	.features h2, .letter {
+		font-size: 1.4rem;
+	}
+
+	.icons svg {
+		display: block;
+		margin: 10px auto 10px auto;
+		align-content: center;
+		float: none;
+	}
+
+	.card p {
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0px;
+	}
+
+	.card h3 {
+		padding: 0px;
+		margin: 0px;
+	}
+
 	.container p {
-		max-width: 50%
+		max-width: 50%;
 	}
 
 	.container h1 {
@@ -179,7 +279,7 @@ nav {
 		margin-top: 0px;
 	}
 
-	p {
+	header p {
 		color: black;
 	}
 
@@ -202,6 +302,12 @@ nav {
 		background-color: #5d3027;
 	}
 
+	.card {
+		width: calc(25% - 20px);
+		height: 220px;
+		margin: 0px 0px 10px 10px;
+		text-align: center;
+	}
 
 	.container{
 		font-size: 2rem;
@@ -211,6 +317,10 @@ nav {
 		color: white;
 		padding-right: 10px;
 		font-size: 0.90em;
+	}
+
+	.features h2, .letter {
+		font-size: 1.4rem;
 	}
 
 	.container h1 {
@@ -236,7 +346,7 @@ nav {
 		margin-top: 0px;
 	}
 
-	p {
+	header p {
 		color: black;
 	}
 
@@ -268,6 +378,10 @@ nav {
 		color: white;
 		padding-right: 10px;
 		font-size: 0.90em;
+	}
+
+	.features h2, .letter {
+		font-size: 1.4rem;
 	}
 
 	.container h1 {
