@@ -62,9 +62,34 @@ nav {
 	width: 100%;
 }
 
+img {
+	height: 150px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+footer {
+	padding: 10px;
+	background-color: #391d18;
+}
+
+footer p {
+	color: #eeeeee;
+}
+
+.icons-end {
+	color: #eeeeee;
+}
+
 .features {
 	background-color: #f8f8f8;
 	overflow: overlay; /* height cannot be fixed, needs to depend on cards */
+	padding-top: 20px;
+}
+
+.useful {
+	background-color: #ebebeb;
+	overflow: overlay;
 	padding-top: 20px;
 }
 
@@ -99,12 +124,71 @@ nav {
 	border-radius: 3px;
 }
 
+.testimonials {
+	background-color: #f8f8f8;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	overflow: overlay
+}
+
+.profession {
+	color: #999;
+	font-size: 0.8rem;
+}
+
+.profile-card {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	position: relative;
+	width: 100%;
+}
+
+.useful .card {
+	background-image: url("./img/note-taking.jpg");
+}
+
+.profile-card img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-left: 20px;
+	margin-right: 20px;
+	position: absolute;
+}
+
+.profile-card h3 {
+	color: #000;
+	margin-top: 5px;
+	padding-left: 120px;
+	height: 10px;
+	font-weight: 500;
+}
+
+.profile-card p {
+	color: #000;
+	padding-left: 120px;
+	padding-right: 20px;
+	text-align: left;
+}
+
+.icons-end i {
+	padding-right: 8px;
+}
 
 .card h3 {
 	color: #000;
 	font-weight: 300;
 	padding-top: 10px;
 	padding-left: 60px;
+	margin-bottom: 0px;
+}
+
+/* Had to modify padding-left */
+.useful .card h3 {
+	color: #000;
+	font-weight: 300;
+	padding-top: 10px;
+	padding-left: 20px;
 	margin-bottom: 0px;
 }
 
@@ -119,6 +203,18 @@ nav {
 	margin-bottom: 0px;
 }
 
+/* Had to modify padding-left */
+.useful .card p {
+	color: #000;
+	font-weight: 100;
+	font-size: 0.8rem;
+	padding-left: 20px;
+	padding-right: 5px;
+	padding-bottom: 20px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
 .icons svg {
 	fill: #814236;
 	margin: 10px 0px 0px 10px;
@@ -127,7 +223,7 @@ nav {
 	float: left;
 }
 
-.features h2 {
+h2 {
 	color: black;
 	font-variant: small-caps;
 	font-weight: 100;
@@ -214,11 +310,19 @@ nav {
 		padding: 0px;
 	}
 
+	/* card for insansely useful does not work as the height is hardcoded */
 	.card {
 		width: calc(50% - 20px);
 		height: 170px;
 		margin: 0px 0px 10px 10px;
 		text-align: center;
+	}
+
+	.useful .card {
+		width: calc(50% - 20px);
+		margin: 0px 0px 10px 10px;
+		text-align: center;
+		height: 300px;
 	}
 
 	.container{
@@ -232,7 +336,7 @@ nav {
 		font-size: 0.90em;
 	}
 
-	.features h2, .letter {
+	h2, .letter {
 		font-size: 1.4rem;
 	}
 
@@ -250,7 +354,20 @@ nav {
 		margin: 0px;
 	}
 
+	/* Had to be created as it was inheriting the changes from the top .useful .card property*/
+	.useful .card p {
+		padding: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0px;
+	}
+
 	.card h3 {
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.useful .card h3 {
 		padding: 0px;
 		margin: 0px;
 	}
@@ -302,11 +419,22 @@ nav {
 		background-color: #5d3027;
 	}
 
+	.icons-end {
+		float: right;
+	}
+
 	.card {
 		width: calc(25% - 20px);
 		height: 220px;
 		margin: 0px 0px 10px 10px;
 		text-align: center;
+	}
+
+	.useful .card {
+		width: calc(25% - 20px);
+		margin: 0px 0px 10px 10px;
+		text-align: center;
+		height: 300px;
 	}
 
 	.container{
@@ -319,7 +447,14 @@ nav {
 		font-size: 0.90em;
 	}
 
-	.features h2, .letter {
+	.profile-card {
+		padding-top: 10px;
+		padding-bottom: 20px;
+		position: relative;
+		width: 33%;
+	}	
+
+	h2, .letter {
 		font-size: 1.4rem;
 	}
 
@@ -380,7 +515,7 @@ nav {
 		font-size: 0.90em;
 	}
 
-	.features h2, .letter {
+	h2, .letter {
 		font-size: 1.4rem;
 	}
 
